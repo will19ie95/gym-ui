@@ -5,22 +5,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+
+// Angular Material
+import { MaterialModule } from "./material.module";
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+
+import { AppRoutingModule } from "./app-routing.module";
+import { MyTableComponent } from './my-table/my-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyNavComponent
+    MyNavComponent,
+    MyDashboardComponent,
+    MyTableComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MaterialModule,
+    AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

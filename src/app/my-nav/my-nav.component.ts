@@ -9,5 +9,5 @@ import { Observable } from 'rxjs';
 })
 export class MyNavComponent {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 }
