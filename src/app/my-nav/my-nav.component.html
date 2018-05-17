@@ -1,38 +1,61 @@
-<!-- TODO sidenav-->
+<div class="excercises-container">
+  <mat-toolbar class="nav-toolbar" color="accent" [class.nav-toolbar-mobile]="(isHandset | async)!.matches">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset | async)!.matches">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>Pull Up</span>
+  </mat-toolbar>
 
+  <mat-sidenav-container class="sidenav-container" [class.sidenav-container-mobile]="(isHandset | async)!.matches">
+    <!-- [opened]="!(isHandset | async)!.matches" [fixedTopGap]="(isHandset | async)!.matches ? 136 : 144"> -->
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+      [opened]="!(isHandset | async)!.matches" [class.mat-sidenav-mobile]="(isHandset | async)!.matches">
+      <mat-nav-list>
+        <!-- <a mat-list-item routerLink="dashboard">Dashboard</a>
+        <a mat-list-item routerLink="table">Table</a> -->
 
-<!-- TODO routerlink sidenav-content -->
+        <mat-accordion multi="true" displayMode="flat">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Shoulders
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li></li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+            </ul>
+          </mat-expansion-panel>
 
-<!-- Header -->
-<mat-toolbar class="nav-toolbar" color="accent">
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset | async)!.matches">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-  </button>
-  <span>Pull Up</span>
-</mat-toolbar>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Triceps
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
 
-<!-- Excercise List-->
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
-    [opened]="!(isHandset | async)!.matches" [fixedTopGap]="(isHandset | async)!.matches ? 136 : 144">
-    <mat-nav-list>
-      <a mat-list-item routerLink="dashboard">Dashboard</a>
-      <a mat-list-item routerLink="table">Table</a>
-      <!-- <a mat-list-item routerLink="#">Link 3</a> -->
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Pull Up
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-      </mat-expansion-panel>
-
-
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!-- Excercise Item -->
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

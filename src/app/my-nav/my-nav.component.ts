@@ -10,4 +10,16 @@ import { Observable } from 'rxjs';
 export class MyNavComponent {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   constructor(private breakpointObserver: BreakpointObserver) { }
+
+  muscle_catagory = [
+    "Shoulders",
+    "Triceps",
+    "Biceps",
+    "Chest",
+    "Back",
+    "Legs",
+    "Abs",
+    "Cardio"
+  ];
+
 }
