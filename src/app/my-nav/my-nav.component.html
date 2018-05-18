@@ -8,48 +8,25 @@
 
   <mat-sidenav-container class="sidenav-container" [class.sidenav-container-mobile]="(isHandset | async)!.matches">
     <!-- [opened]="!(isHandset | async)!.matches" [fixedTopGap]="(isHandset | async)!.matches ? 136 : 144"> -->
-    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
-      [opened]="!(isHandset | async)!.matches" [class.mat-sidenav-mobile]="(isHandset | async)!.matches">
+    <mat-sidenav #drawer class="sidenav mat-elevation-z10" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'"
+      [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [opened]="!(isHandset | async)!.matches" [class.mat-sidenav-mobile]="(isHandset | async)!.matches">
       <mat-nav-list>
 
         <mat-accordion multi="true" displayMode="flat">
-          <mat-expansion-panel>
+          <mat-expansion-panel *ngFor="let muscle of muscle_list | keys">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                Shoulders
+                {{ muscle }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <ul>
-              <li></li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
+
+            <ul class="excercise-list" *ngFor="let excercise of muscle_list[muscle]">
+              <!-- <li>{{ excercise }}</li> -->
+              <a>{{ excercise }}</a>
             </ul>
           </mat-expansion-panel>
 
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Triceps
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-              <li>2</li>
-            </ul>
-          </mat-expansion-panel>
         </mat-accordion>
-
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

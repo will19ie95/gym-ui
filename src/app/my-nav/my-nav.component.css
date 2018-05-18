@@ -75,10 +75,7 @@ mat-nav-list {
 mat-sidenav {
   position: fixed;
   top: 144px;
-  background: none;
-  box-shadow: none !important;
-  max-height: 50vh;
-  /* border: 2px solid black; */
+  max-height: 100vh;
 }
 
 .mat-sidenav-mobile {

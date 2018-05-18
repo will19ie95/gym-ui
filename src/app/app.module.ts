@@ -13,13 +13,15 @@ import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { KeysPipe } from './keys.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNavComponent,
     MyDashboardComponent,
-    MyTableComponent
+    MyTableComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
