@@ -11,31 +11,8 @@ export class MyNavComponent {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   constructor(private breakpointObserver: BreakpointObserver) { }
 
-  muscle_list = {
-    Shoulders: [
-      "Front Dumbbell Raise",
-      "Lateral Dumbbell Raise",
-      "Laterla Machine Raise",
-      "Overhead Press",
-      "Seated Dummbell Lateral Raise",
-      "Seated Dummbell Press",
-      "Standing Dumbbell Raise"
-    ],
-    Triceps: [
-      "Rope Push Down",
-      "Skull Crusher",
-      "V-Bar Push Down",
-      "One Hand Cable Push Down",
-    ],
-    Biceps: [
-      "Barbell Curl",
-      "Dumbbell Curl",
-      "Hammer Curl",
-    ],
-    Chest: [],
-    Back: [],
-    Legs: [],
-    Abs: [],
-    Cardio: []
-  };
+  muscle_list = require('./mock_list.json');
+
+  // fix side nav when scrolled to top
+
 }

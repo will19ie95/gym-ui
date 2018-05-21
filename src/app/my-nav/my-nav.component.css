@@ -1,8 +1,9 @@
 .sidenav-container {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   position: absolute;
   top: 144px;
+  overflow: visible;
 }
 
 .sidenav-container-mobile {
@@ -12,8 +13,16 @@
 .sidenav {
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
-  /* position: sticky; */
-  
+  /* position: fixed; */
+  top: 144px;
+  top: 0px;
+  position: absolute;
+  /* max-height: 100vh; */
+}
+
+.mat-sidenav-mobile {
+  /* top: 136px; */
+  top: 0px;
 }
 
 .nav-toolbar {
@@ -61,23 +70,12 @@ mat-accordion ul{
   width: 100%;
   display: flex;
   position: absolute;
-  /* top: 144px; */
 }
 
 mat-sidenav-content {
-  overflow: hidden;
+  overflow: visible;
 }
 
 mat-nav-list {
   padding: 0px;
-}
-
-mat-sidenav {
-  position: fixed;
-  top: 144px;
-  max-height: 100vh;
-}
-
-.mat-sidenav-mobile {
-  top: 136px;
 }
