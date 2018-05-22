@@ -13,16 +13,13 @@
 .sidenav {
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
-  /* position: fixed; */
-  top: 144px;
+  /* top: 144px; */
   top: 0px;
   position: absolute;
-  /* max-height: 100vh; */
 }
 
-.mat-sidenav-mobile {
-  /* top: 136px; */
-  top: 0px;
+.sidenav-fixed-top {
+  position: fixed;
 }
 
 .nav-toolbar {

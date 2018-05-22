@@ -1,6 +1,6 @@
 <div class="excercises-container">
   <mat-toolbar class="nav-toolbar" color="accent" [class.nav-toolbar-mobile]="(isHandset | async)!.matches">
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset | async)!.matches">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()" *ngIf="(isHandset | async)!.matches">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <span>Pull Up</span>
@@ -8,8 +8,8 @@
 
   <mat-sidenav-container class="sidenav-container" [class.sidenav-container-mobile]="(isHandset | async)!.matches">
     <!-- [opened]="!(isHandset | async)!.matches" [fixedTopGap]="(isHandset | async)!.matches ? 136 : 144"> -->
-    <mat-sidenav #drawer class="sidenav mat-elevation-z10" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'"
-      [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [opened]="!(isHandset | async)!.matches" [class.mat-sidenav-mobile]="(isHandset | async)!.matches">
+    <mat-sidenav appFixedtop #sidenav class="sidenav mat-elevation-z10" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'"
+      [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [opened]="!(isHandset | async)!.matches">
       <mat-nav-list>
 
         <mat-accordion multi="true" displayMode="flat">

@@ -14,6 +14,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { KeysPipe } from './keys.pipe';
+import { FixedtopDirective } from './my-nav/fixedtop.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { KeysPipe } from './keys.pipe';
     MyNavComponent,
     MyDashboardComponent,
     MyTableComponent,
-    KeysPipe
+    KeysPipe,
+    FixedtopDirective
   ],
   imports: [
     BrowserModule,

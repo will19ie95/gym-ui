@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 
@@ -7,12 +7,14 @@ import { Observable } from 'rxjs';
   templateUrl: './my-nav.component.html',
   styleUrls: ['./my-nav.component.css']
 })
-export class MyNavComponent {
+export class MyNavComponent implements OnInit {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver) {
+  }
 
   muscle_list = require('./mock_list.json');
 
   // fix side nav when scrolled to top
-
+  ngOnInit() {
+  }
 }
