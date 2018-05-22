@@ -13,7 +13,8 @@ import {
   MatIconModule,
   MatMenuModule,
   MatExpansionModule,
-  MatDividerModule
+  MatDividerModule,
+  MatTabsModule
 } from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { LayoutModule } from "@angular/cdk/layout";
@@ -35,7 +36,8 @@ import { LayoutModule } from "@angular/cdk/layout";
     MatIconModule,
     MatMenuModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTabsModule
   ],
   exports: [
     LayoutModule,
@@ -53,7 +55,8 @@ import { LayoutModule } from "@angular/cdk/layout";
     MatIconModule,
     MatMenuModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }
