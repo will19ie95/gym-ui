@@ -14,7 +14,6 @@ export class MyNavComponent implements OnInit {
 
   muscle_list = require('./mock_list.json');
 
-  // fix side nav when scrolled to top
   ngOnInit() {
   }
 }
