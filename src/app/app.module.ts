@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 // Angular Material
@@ -18,18 +17,19 @@ import { FixedtopDirective } from './my-nav/fixedtop.directive';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ExcercisesComponent } from './excercises/excercises.component';
 import { ExcerciseContentComponent } from './excercise-content/excercise-content.component';
+import { ExcerciseCategoriesComponent } from './excercise-categories/excercise-categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyNavComponent,
     MyDashboardComponent,
     MyTableComponent,
     KeysPipe,
     FixedtopDirective,
     ToolbarComponent,
     ExcercisesComponent,
-    ExcerciseContentComponent
+    ExcerciseContentComponent,
+    ExcerciseCategoriesComponent
   ],
   imports: [
     BrowserModule,

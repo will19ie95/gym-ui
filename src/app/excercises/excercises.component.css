@@ -79,6 +79,8 @@ li.excercise-item:hover {
 
 mat-sidenav-content {
   overflow: visible;
+  min-height: 100vh;
+  width: 100%;
 }
 
 mat-nav-list {
