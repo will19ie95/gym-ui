@@ -14,6 +14,7 @@ export class ExcercisesComponent implements OnInit {
   }
 
   muscle_list = require('../mock_data/excercises_list.json');
+  page_title = "Excercises";
 
   ngOnInit() {
   }

@@ -68,13 +68,13 @@ li.excercise-item {
   padding: 0px;
   margin: 10px 0px;
   /* TODO add nice border/background */
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   cursor: pointer;
 }
 
 li.excercise-item:hover {
   /* TODO add nice border/background */
-  background-color: aqua;
+  background-color: gray;
 }
 
 mat-sidenav-content {
