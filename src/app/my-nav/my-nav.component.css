@@ -1,9 +1,10 @@
 .sidenav-container {
-  /* height: 100%; */
   width: 100%;
   position: absolute;
   top: 144px;
   overflow: visible;
+  left: 0px;
+  right: 0px;
 }
 
 .sidenav-container-mobile {
@@ -13,7 +14,6 @@
 .sidenav {
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
-  /* top: 144px; */
   top: 0px;
   position: absolute;
 }
