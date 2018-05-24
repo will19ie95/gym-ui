@@ -13,16 +13,18 @@
 
       <mat-nav-list>
         <mat-accordion multi="true" displayMode="flat">
-          <mat-expansion-panel *ngFor="let muscle of muscle_list | keys">
+          <mat-expansion-panel *ngFor="let muscle of muscles">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                {{ muscle }}
+                {{ muscle.category }}
               </mat-panel-title>
             </mat-expansion-panel-header>
             <ul class="excercise-list">
-              <li class="excercise-item" *ngFor="let excercise of muscle_list[muscle]">
-                {{ excercise }}
-              </li>
+              <ng-container *ngFor="let excercise of excercises">
+                <li class="excercise-item" *ngIf="excercise.category === muscle.category">
+                  {{ excercise.name }}
+                </li>
+              </ng-container>
             </ul>
           </mat-expansion-panel>
         </mat-accordion>

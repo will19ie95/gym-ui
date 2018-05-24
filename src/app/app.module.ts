@@ -13,7 +13,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { KeysPipe } from './keys.pipe';
-import { FixedtopDirective } from './my-nav/fixedtop.directive';
+import { FixedtopDirective } from './excercises/fixedtop.directive';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ExcercisesComponent } from './excercises/excercises.component';
 import { ExcerciseContentComponent } from './excercise-content/excercise-content.component';
