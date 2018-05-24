@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusclesService } from "../services/muscles.service";
 
 @Component({
   selector: 'app-excercise-categories',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExcerciseCategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private musclesService: MusclesService) { }
+
+  muscles;
 
   ngOnInit() {
+    this.getMuscles();
+  }
+
+  // TODO get this from parent instead of from service?
+  getMuscles() {
+    this.musclesService.getMuscles().subscribe(data => {
+      console.log("muscles categories", data);
+      this.muscles = data;
+    });
   }
 
 }

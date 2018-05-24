@@ -1,0 +1,15 @@
+.muscle-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: auto;
+  justify-content: flex-start;
+}
+
+.muscle-card {
+  text-align: center;
+  width: 125px;
+  display: inline-block;
+  margin: 15px;
+  cursor: pointer;
+}

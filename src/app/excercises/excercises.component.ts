@@ -19,7 +19,6 @@ export class ExcercisesComponent implements OnInit {
     private musclesService: MusclesService
   ) { }
 
-  // muscle_list = require('../mock_data/excercises_list.json');
   muscles;
   excercises;
   page_title = "Excercises";
@@ -31,14 +30,14 @@ export class ExcercisesComponent implements OnInit {
 
   getExcercises() {
     this.excerciseService.getExcercises().subscribe(data => {
-      console.log("excercise", data);
+      // console.log("excercise", data);
       this.excercises = data;
     });
   }
 
   getMuscles() {
     this.musclesService.getMuscles().subscribe(data => {
-      console.log("muscles", data);
+      // console.log("muscles", data);
       this.muscles = data;
     });
   }
