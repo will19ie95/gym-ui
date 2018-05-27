@@ -1,4 +1,4 @@
-import { Excercise } from './excercise.model';
+import { Excercise } from '../models/excercise.model';
 
 export const EXCERCISES: Excercise[] = [
   // shoulders

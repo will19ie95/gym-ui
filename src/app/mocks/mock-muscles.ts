@@ -1,4 +1,4 @@
-import { Muscles } from "./muscles.model";
+import { Muscles } from "../models/muscles.model";
 
 export const MUSCLES: Muscles[] = [
   { category: "Shoulders" },

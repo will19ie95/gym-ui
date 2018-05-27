@@ -18,6 +18,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ExcercisesComponent } from './excercises/excercises.component';
 import { ExcerciseContentComponent } from './excercise-content/excercise-content.component';
 import { ExcerciseCategoriesComponent } from './excercise-categories/excercise-categories.component';
+import { ExcerciseCategoryComponent } from './excercise-category/excercise-category.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ExcerciseCategoriesComponent } from './excercise-categories/excercise-c
     ToolbarComponent,
     ExcercisesComponent,
     ExcerciseContentComponent,
-    ExcerciseCategoriesComponent
+    ExcerciseCategoriesComponent,
+    ExcerciseCategoryComponent
   ],
   imports: [
     BrowserModule,

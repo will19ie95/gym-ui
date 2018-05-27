@@ -6,6 +6,7 @@ import { MyTableComponent } from "./my-table/my-table.component";
 import { ExcercisesComponent } from "./excercises/excercises.component";
 import { ExcerciseContentComponent } from "./excercise-content/excercise-content.component";
 import { ExcerciseCategoriesComponent } from "./excercise-categories/excercise-categories.component";
+import { ExcerciseCategoryComponent } from "./excercise-category/excercise-category.component";
 
 const appRoutes: Routes = [
   {
@@ -27,7 +28,11 @@ const appRoutes: Routes = [
         component: ExcerciseCategoriesComponent
       },
       {
-        path: "content",
+        path: "categories/:muscle",
+        component: ExcerciseCategoryComponent
+      },
+      {
+        path: "categories/:muscle/content",
         component: ExcerciseContentComponent
       }
     ]
