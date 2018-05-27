@@ -93,3 +93,7 @@ mat-nav-list {
   display: flex;
   position: absolute; */
 }
+
+.capitalize {
+  text-transform: capitalize;
+}

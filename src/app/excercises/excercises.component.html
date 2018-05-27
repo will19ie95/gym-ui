@@ -3,7 +3,7 @@
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()" *ngIf="(isHandset | async)!.matches">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-    <span>{{ page_title }}</span>
+    <span class="capitalize">{{ page_title }}</span>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container" [class.sidenav-container-mobile]="(isHandset | async)!.matches">

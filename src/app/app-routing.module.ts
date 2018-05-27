@@ -32,7 +32,7 @@ const appRoutes: Routes = [
         component: ExcerciseCategoryComponent
       },
       {
-        path: "categories/:muscle/content",
+        path: "categories/:muscle/:excercise",
         component: ExcerciseContentComponent
       }
     ]

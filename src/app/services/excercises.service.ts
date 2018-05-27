@@ -14,11 +14,11 @@ export class ExcercisesService {
     return of(EXCERCISES);
   }
 
-  getExcercisesByMuscle(muscle: String): Observable<Excercise[]> {
+  getExcercisesByMuscle(category: String): Observable<Excercise[]> {
 
     // filter by muscle
     const excercises = EXCERCISES.filter((excercise) => {
-      return excercise.category === muscle;
+      return excercise.category === category;
     });
 
     return of(excercises);

@@ -1,5 +1,5 @@
 <div class="card-container">
-  <mat-card class="card" *ngFor="let excercise of excercises" [routerLink]="['content']">
+  <mat-card class="card" *ngFor="let excercise of excercises" [routerLink]="[excercise.name]">
     {{ excercise.name }}
   </mat-card>
 </div>

@@ -14,18 +14,18 @@ export class ExcerciseCategoryComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  muscle: String;
+  category: String;
   excercises;
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      this.muscle = params['muscle'];
+      this.category = params['muscle'];
       this.getExcercises();
     });
   }
 
   getExcercises() {
-    this.excercisesService.getExcercisesByMuscle(this.muscle).subscribe(data => {
+    this.excercisesService.getExcercisesByMuscle(this.category).subscribe(data => {
       console.log("excercise category ", data);
       this.excercises = data;
     });
