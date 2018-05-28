@@ -16,9 +16,9 @@ import { KeysPipe } from './keys.pipe';
 import { FixedtopDirective } from './excercises/fixedtop.directive';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ExcercisesComponent } from './excercises/excercises.component';
-import { ExcerciseContentComponent } from './excercise-content/excercise-content.component';
-import { ExcerciseCategoriesComponent } from './excercise-categories/excercise-categories.component';
-import { ExcerciseCategoryComponent } from './excercise-category/excercise-category.component';
+import { ExcerciseContentComponent } from './excercises/excercise-content/excercise-content.component';
+import { ExcerciseCategoriesComponent } from './excercises/excercise-categories/excercise-categories.component';
+import { ExcerciseCategoryComponent } from './excercises/excercise-category/excercise-category.component';
 
 @NgModule({
   declarations: [

@@ -4,9 +4,9 @@ import { Routes, RouterModule, CanActivate } from "@angular/router";
 import { MyDashboardComponent } from "./my-dashboard/my-dashboard.component";
 import { MyTableComponent } from "./my-table/my-table.component";
 import { ExcercisesComponent } from "./excercises/excercises.component";
-import { ExcerciseContentComponent } from "./excercise-content/excercise-content.component";
-import { ExcerciseCategoriesComponent } from "./excercise-categories/excercise-categories.component";
-import { ExcerciseCategoryComponent } from "./excercise-category/excercise-category.component";
+import { ExcerciseContentComponent } from "./excercises/excercise-content/excercise-content.component";
+import { ExcerciseCategoriesComponent } from "./excercises/excercise-categories/excercise-categories.component";
+import { ExcerciseCategoryComponent } from "./excercises/excercise-category/excercise-category.component";
 
 const appRoutes: Routes = [
   {
@@ -44,26 +44,7 @@ const appRoutes: Routes = [
   {
     path: "table",
     component: MyTableComponent
-  },
-
-  // {
-  //   path: "home",
-  //   component: MyNavComponent,
-  //   children: [
-  //     {
-  //       path: "excercises",
-  //       component: ExcercisesComponent
-  //     },
-  //     {
-  //       path: "dashboard",
-  //       component: MyDashboardComponent
-  //     },
-  //     {
-  //       path: "table",
-  //       component: MyTableComponent
-  //     }
-  //   ]
-  // }
+  }
 ];
 
 @NgModule({

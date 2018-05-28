@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MusclesService } from "../services/muscles.service";
+import { MusclesService } from "../../services/muscles.service";
 
 @Component({
   selector: 'app-excercise-categories',
