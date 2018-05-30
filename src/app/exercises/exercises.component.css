@@ -57,13 +57,13 @@
   font-size: 18px;
 }
 
-ul.excercise-list {
+ul.exercise-list {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
 
-li.excercise-item {
+li.exercise-item {
   list-style: none;
   padding: 0px;
   margin: 10px 0px;
@@ -72,7 +72,7 @@ li.excercise-item {
   cursor: pointer;
 }
 
-li.excercise-item:hover {
+li.exercise-item:hover {
   /* TODO add nice border/background */
   background-color: gray;
 }
@@ -87,7 +87,7 @@ mat-nav-list {
   padding: 0px;
 }
 
-.excercises-container {
+.exercises-container {
   /* height: 100%;
   width: 100%;
   display: flex;

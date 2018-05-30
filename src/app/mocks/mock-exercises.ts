@@ -1,6 +1,6 @@
-import { Excercise } from '../models/excercise.model';
+import { Exercise } from '../models/exercise.model';
 
-export const EXCERCISES: Excercise[] = [
+export const EXCERCISES: Exercise[] = [
   // shoulders
   {
     category: "Shoulders",

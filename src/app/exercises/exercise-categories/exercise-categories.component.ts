@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MusclesService } from "../../services/muscles.service";
 
 @Component({
-  selector: 'app-excercise-categories',
-  templateUrl: './excercise-categories.component.html',
-  styleUrls: ['./excercise-categories.component.css']
+  selector: 'app-exercise-categories',
+  templateUrl: './exercise-categories.component.html',
+  styleUrls: ['./exercise-categories.component.css']
 })
-export class ExcerciseCategoriesComponent implements OnInit {
+export class ExerciseCategoriesComponent implements OnInit {
 
   constructor(private musclesService: MusclesService) { }
 

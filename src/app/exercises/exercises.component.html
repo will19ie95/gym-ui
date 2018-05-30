@@ -1,4 +1,4 @@
-<div class="excercises-container">
+<div class="exercises-container">
   <mat-toolbar class="nav-toolbar" color="primary" [class.nav-toolbar-mobile]="(isHandset | async)!.matches">
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()" *ngIf="(isHandset | async)!.matches">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
@@ -18,12 +18,12 @@
                 {{ muscle.category }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <ul class="excercise-list">
-              <ng-container *ngFor="let excercise of excercises">
+            <ul class="exercise-list">
+              <ng-container *ngFor="let exercise of exercises">
                 <!-- TODO simplify routerLink -->
-                <li class="excercise-item" *ngIf="excercise.category === muscle.category" [routerLink]="['/', 'excercises', 'categories', excercise.category, excercise.name]"
+                <li class="exercise-item" *ngIf="exercise.category === muscle.category" [routerLink]="['/', 'exercises', 'categories', exercise.category, exercise.name]"
                   (click)="sideNavMobileToggle()">
-                  {{ excercise.name }}
+                  {{ exercise.name }}
                 </li>
               </ng-container>
             </ul>

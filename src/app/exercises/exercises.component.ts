@@ -2,23 +2,23 @@ import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/co
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 
-import { ExcercisesService } from "../services/excercises.service";
+import { ExercisesService } from "../services/exercises.service";
 import { MusclesService } from "../services/muscles.service";
 import { ActivatedRoute, Params, UrlSegment, Router, Event, NavigationStart } from '@angular/router';
 
 import { MatSidenav } from '@angular/material';
 
 @Component({
-  selector: 'app-excercises',
-  templateUrl: './excercises.component.html',
-  styleUrls: ['./excercises.component.css']
+  selector: 'app-exercises',
+  templateUrl: './exercises.component.html',
+  styleUrls: ['./exercises.component.css']
 })
-export class ExcercisesComponent implements OnInit, OnDestroy {
+export class ExercisesComponent implements OnInit, OnDestroy {
 
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private excerciseService: ExcercisesService,
+    private exerciseService: ExercisesService,
     private musclesService: MusclesService,
     private route: ActivatedRoute,
     private router: Router
@@ -26,7 +26,7 @@ export class ExcercisesComponent implements OnInit, OnDestroy {
 
   isMobile: Boolean;
   muscles;
-  excercises;
+  exercises;
   page_title;
   routeSubscription;
   handsetSubscription;
@@ -43,7 +43,7 @@ export class ExcercisesComponent implements OnInit, OnDestroy {
       }
     });
 
-    // set initial title to Excercise, decode percent encoding
+    // set initial title to Exercise, decode percent encoding
     this.page_title = decodeURIComponent(this.router.routerState.snapshot.url.split("/").pop());
 
     // change page_title based on current route
@@ -57,7 +57,7 @@ export class ExcercisesComponent implements OnInit, OnDestroy {
       }
     });
     this.getMuscles();
-    this.getExcercises();
+    this.getExercises();
   }
 
   ngOnDestroy(): void {
@@ -65,10 +65,10 @@ export class ExcercisesComponent implements OnInit, OnDestroy {
     this.routeSubscription.unsubscribe();
   }
 
-  getExcercises() {
-    this.excerciseService.getExcercises().subscribe(data => {
-      // console.log("excercise", data);
-      this.excercises = data;
+  getExercises() {
+    this.exerciseService.getExercises().subscribe(data => {
+      // console.log("exercise", data);
+      this.exercises = data;
     });
   }
 

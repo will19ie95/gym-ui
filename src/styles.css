@@ -7,3 +7,9 @@ indigo-pink.css
 pink-bluegrey.css
 purple-green.css 
 */
+
+html, 
+body {
+  padding: 0px;
+  margin: 0px;
+}

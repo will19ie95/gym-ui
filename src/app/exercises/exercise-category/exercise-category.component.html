@@ -1,0 +1,5 @@
+<div class="card-container">
+  <mat-card class="card" *ngFor="let exercise of exercises" [routerLink]="[exercise.name]">
+    {{ exercise.name }}
+  </mat-card>
+</div>

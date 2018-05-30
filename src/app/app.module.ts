@@ -13,12 +13,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { KeysPipe } from './keys.pipe';
-import { FixedtopDirective } from './excercises/fixedtop.directive';
+import { FixedtopDirective } from './exercises/fixedtop.directive';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { ExcercisesComponent } from './excercises/excercises.component';
-import { ExcerciseContentComponent } from './excercises/excercise-content/excercise-content.component';
-import { ExcerciseCategoriesComponent } from './excercises/excercise-categories/excercise-categories.component';
-import { ExcerciseCategoryComponent } from './excercises/excercise-category/excercise-category.component';
+import { ExercisesComponent } from './exercises/exercises.component';
+import { ExerciseContentComponent } from './exercises/exercise-content/exercise-content.component';
+import { ExerciseCategoriesComponent } from './exercises/exercise-categories/exercise-categories.component';
+import { ExerciseCategoryComponent } from './exercises/exercise-category/exercise-category.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +28,10 @@ import { ExcerciseCategoryComponent } from './excercises/excercise-category/exce
     KeysPipe,
     FixedtopDirective,
     ToolbarComponent,
-    ExcercisesComponent,
-    ExcerciseContentComponent,
-    ExcerciseCategoriesComponent,
-    ExcerciseCategoryComponent
+    ExercisesComponent,
+    ExerciseContentComponent,
+    ExerciseCategoriesComponent,
+    ExerciseCategoryComponent
   ],
   imports: [
     BrowserModule,
