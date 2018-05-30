@@ -1,12 +1,12 @@
-<div class="exercises-container">
-  <mat-toolbar class="nav-toolbar" color="primary" [class.nav-toolbar-mobile]="(isHandset | async)!.matches">
+<div>
+  <mat-toolbar class="nav-toolbar" color="primary">
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()" *ngIf="(isHandset | async)!.matches">
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <span class="capitalize">{{ page_title }}</span>
   </mat-toolbar>
 
-  <mat-sidenav-container class="sidenav-container" [class.sidenav-container-mobile]="(isHandset | async)!.matches">
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav appFixedtop #sidenav class="sidenav mat-elevation-z10" fixedInViewport="false" [attr.role]="isHandset ? 'dialog' : 'navigation'"
       [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [opened]="!(isHandset | async)!.matches">
 

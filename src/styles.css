@@ -13,3 +13,13 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+.main {
+  position: relative;
+  top: 64px;
+}
+
+.main-mobile {
+  position: relative;
+  top: 56px !important;
+}

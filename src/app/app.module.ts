@@ -19,6 +19,7 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { ExerciseContentComponent } from './exercises/exercise-content/exercise-content.component';
 import { ExerciseCategoriesComponent } from './exercises/exercise-categories/exercise-categories.component';
 import { ExerciseCategoryComponent } from './exercises/exercise-category/exercise-category.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ExerciseCategoryComponent } from './exercises/exercise-category/exercis
     ExercisesComponent,
     ExerciseContentComponent,
     ExerciseCategoriesComponent,
-    ExerciseCategoryComponent
+    ExerciseCategoryComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

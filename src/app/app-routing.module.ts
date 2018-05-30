@@ -7,12 +7,17 @@ import { ExercisesComponent } from "./exercises/exercises.component";
 import { ExerciseContentComponent } from "./exercises/exercise-content/exercise-content.component";
 import { ExerciseCategoriesComponent } from "./exercises/exercise-categories/exercise-categories.component";
 import { ExerciseCategoryComponent } from "./exercises/exercise-category/exercise-category.component";
+import { CalendarComponent } from "./calendar/calendar.component";
 
 const appRoutes: Routes = [
   {
     path: "",
     redirectTo: "/dashboard",
     pathMatch: "full"
+  },
+  {
+    path: "calendar",
+    component: CalendarComponent,
   },
   {
     path: "exercises",

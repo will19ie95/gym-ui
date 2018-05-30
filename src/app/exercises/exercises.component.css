@@ -1,19 +1,11 @@
-.nav-toolbar-mobile {
-  top: 56px !important;
-}
-
 /* Side Nav */
 .sidenav-container {
   width: 100%;
   position: absolute;
-  top: 144px;
+  top: 80px;
   overflow: visible;
   left: 0px;
   right: 0px;
-}
-
-.sidenav-container-mobile {
-  top: 136px;
 }
 
 .sidenav {
@@ -30,7 +22,7 @@
 .nav-toolbar {
   height: 80px;
   position: absolute;
-  top: 64px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 2;
@@ -80,18 +72,10 @@ li.exercise-item:hover {
 mat-sidenav-content {
   overflow: visible;
   min-height: 100vh;
-  /* width: 100%; */
 }
 
 mat-nav-list {
   padding: 0px;
-}
-
-.exercises-container {
-  /* height: 100%;
-  width: 100%;
-  display: flex;
-  position: absolute; */
 }
 
 .capitalize {

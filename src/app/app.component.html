@@ -2,4 +2,6 @@
 <app-toolbar></app-toolbar>
 
 <!-- TODO routerlink component/sidenav-container -->
-<router-outlet></router-outlet>
+<div class="main" [class.main-mobile]="(isHandset | async)!.matches">
+  <router-outlet></router-outlet>
+</div>
