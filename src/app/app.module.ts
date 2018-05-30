@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FormsModule } from '@angular/forms';
 
 // Angular Material
 import { MaterialModule } from "./material.module";
@@ -19,7 +20,18 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { ExerciseContentComponent } from './exercises/exercise-content/exercise-content.component';
 import { ExerciseCategoriesComponent } from './exercises/exercise-categories/exercise-categories.component';
 import { ExerciseCategoryComponent } from './exercises/exercise-category/exercise-category.component';
+
+// calendar
 import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarModule } from 'angular-calendar';
+
+// calendar demo
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DemoUtilsModule } from './calendar/demo-utils/module';
+import { DemoModule } from './calendar/kitchen-sink/module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -33,17 +45,24 @@ import { CalendarComponent } from './calendar/calendar.component';
     ExerciseContentComponent,
     ExerciseCategoriesComponent,
     ExerciseCategoryComponent,
-    CalendarComponent
+    CalendarComponent,
+    // calendar demos
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     LayoutModule,
     MaterialModule,
     AppRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CalendarModule.forRoot(),
+    // calendar demo
+    NgbModule.forRoot(),
+    DemoUtilsModule,
+    DemoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

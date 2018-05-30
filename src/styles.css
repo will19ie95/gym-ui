@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-/* 
+/* Angular Material Styles
+
 deeppurple-amber.css
 indigo-pink.css
 pink-bluegrey.css
 purple-green.css 
+
 */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+
+/* angular-cli file: src/styles.css, angular calendar */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 html, 
 body {
