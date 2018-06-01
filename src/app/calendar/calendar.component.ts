@@ -32,19 +32,13 @@ import { colors } from "./colors";
 })
 export class CalendarComponent implements OnInit {
 
-  @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
   // calendar view
   view: string = 'month';
 
   viewDate: Date = new Date();
 
-  modalData: {
-    action: string;
-    event: CalendarEvent;
-  };
-
-  refresh: Subject<any> = new Subject();
+  // refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
     {
@@ -59,40 +53,30 @@ export class CalendarComponent implements OnInit {
       color: colors.yellow,
     },
     {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
-      color: colors.blue
+      start: subDays(startOfDay(new Date()), 1),
+      title: 'An event with 1 day',
+      color: colors.blue,
     },
+    // {
+    //   start: subDays(endOfMonth(new Date()), 3),
+    //   end: addDays(endOfMonth(new Date()), 3),
+    //   title: 'A long event that spans 2 months',
+    //   color: colors.blue
+    // },
     {
       start: addHours(startOfDay(new Date()), 2),
       end: new Date(),
       title: 'A draggable and resizable event',
       color: colors.yellow,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
-      draggable: true
     }
   ];
 
-  activeDayIsOpen: boolean = true;
+  constructor() { }
 
-  constructor(private modal: NgbModal) { }
+  ngOnInit() { }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    if (isSameMonth(date, this.viewDate)) {
-      if (
-        (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
-        events.length === 0
-      ) {
-        this.activeDayIsOpen = false;
-      } else {
-        this.activeDayIsOpen = true;
-        this.viewDate = date;
-      }
-    }
+    this.viewDate = date;
   }
 
   eventTimesChanged({
@@ -102,13 +86,6 @@ export class CalendarComponent implements OnInit {
   }: CalendarEventTimesChangedEvent): void {
     event.start = newStart;
     event.end = newEnd;
-    this.handleEvent('Dropped or resized', event);
-    this.refresh.next();
-  }
-
-  handleEvent(action: string, event: CalendarEvent): void {
-    this.modalData = { event, action };
-    this.modal.open(this.modalContent, { size: 'lg' });
   }
 
   addEvent(): void {
@@ -123,7 +100,6 @@ export class CalendarComponent implements OnInit {
         afterEnd: true
       }
     });
-    this.refresh.next();
   }
 
 }
