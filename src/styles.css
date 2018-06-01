@@ -29,3 +29,10 @@ body {
   position: relative;
   top: 56px !important;
 }
+
+
+/* demo calendar */
+mwl-demo-component {
+  position: relative;
+  top: 25px;
+}

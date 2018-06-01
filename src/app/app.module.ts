@@ -27,7 +27,6 @@ import { CalendarModule } from 'angular-calendar';
 
 // calendar demo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DemoUtilsModule } from './calendar/demo-utils/module';
 import { DemoModule } from './calendar/kitchen-sink/module';
 
 
@@ -61,7 +60,7 @@ import { DemoModule } from './calendar/kitchen-sink/module';
     CalendarModule.forRoot(),
     // calendar demo
     NgbModule.forRoot(),
-    DemoUtilsModule,
+    // DemoUtilsModule,
     DemoModule,
   ],
   providers: [],
