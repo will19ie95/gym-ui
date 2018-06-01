@@ -8,7 +8,6 @@ import { ExerciseContentComponent } from "./exercises/exercise-content/exercise-
 import { ExerciseCategoriesComponent } from "./exercises/exercise-categories/exercise-categories.component";
 import { ExerciseCategoryComponent } from "./exercises/exercise-category/exercise-category.component";
 import { CalendarComponent } from "./calendar/calendar.component";
-import { DemoComponent } from "./calendar/kitchen-sink/component";
 
 const appRoutes: Routes = [
   {
@@ -16,13 +15,9 @@ const appRoutes: Routes = [
     redirectTo: "/dashboard",
     pathMatch: "full"
   },
-  // {
-  //   path: "calendar",
-  //   component: CalendarComponent,
-  // },
   {
     path: "calendar",
-    component: DemoComponent
+    component: CalendarComponent,
   },
   {
     path: "exercises",
