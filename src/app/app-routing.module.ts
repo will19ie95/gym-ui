@@ -8,6 +8,7 @@ import { ExerciseContentComponent } from "./exercises/exercise-content/exercise-
 import { ExerciseCategoriesComponent } from "./exercises/exercise-categories/exercise-categories.component";
 import { ExerciseCategoryComponent } from "./exercises/exercise-category/exercise-category.component";
 import { CalendarComponent } from "./calendar/calendar.component";
+import { WorkoutComponent } from "./workout/workout.component";
 
 const appRoutes: Routes = [
   {
@@ -18,6 +19,10 @@ const appRoutes: Routes = [
   {
     path: "calendar",
     component: CalendarComponent,
+  },
+  {
+    path: "workout",
+    component: WorkoutComponent,
   },
   {
     path: "exercises",

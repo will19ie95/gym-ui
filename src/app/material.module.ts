@@ -14,7 +14,10 @@ import {
   MatMenuModule,
   MatExpansionModule,
   MatDividerModule,
-  MatTabsModule
+  MatTabsModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule
 } from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { LayoutModule } from "@angular/cdk/layout";
@@ -37,7 +40,10 @@ import { LayoutModule } from "@angular/cdk/layout";
     MatMenuModule,
     MatExpansionModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [
     LayoutModule,
@@ -56,7 +62,10 @@ import { LayoutModule } from "@angular/cdk/layout";
     MatMenuModule,
     MatExpansionModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}
