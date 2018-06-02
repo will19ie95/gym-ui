@@ -1,0 +1,14 @@
+.workout-item-container {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.sub-text {
+  color: slategrey;
+  font-size: medium;
+}
+
+.item-div {
+  /* margin: 0px; */
+  text-align: right;
+}

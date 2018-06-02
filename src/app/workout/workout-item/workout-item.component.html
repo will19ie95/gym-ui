@@ -1,3 +1,13 @@
-<p>
-  workout-item works!
-</p>
+<div class="workout-item-container" fxLayout fxFlex="90%" fxLayoutGap="20px" fxLayoutGap.xs="0" fxLayoutAlign="start">
+  <div class="item-div" fxFlex="20%">
+    {{ set }}
+  </div>
+  <div class="item-div" fxFlex="40%">
+    {{ weight }}
+    <span class="sub-text">lbs</span>
+  </div>
+  <div class="item-div" fxFlex="40%">
+    {{ reps }}
+    <span class="sub-text">reps</span>
+  </div>
+</div>

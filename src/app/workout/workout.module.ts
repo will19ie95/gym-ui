@@ -6,9 +6,12 @@ import { WorkoutItemComponent } from "./workout-item/workout-item.component";
 import { WorkoutItemListComponent } from "./workout-item-list/workout-item-list.component";
 import { WorkoutCardListComponent } from "./workout-card-list/workout-card-list.component";
 import { WorkoutCardComponent } from "./workout-card/workout-card.component";
+import { MaterialModule } from "../material.module";
+import { RouterModule } from "@angular/router";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, MaterialModule, RouterModule, FlexLayoutModule],
   declarations: [
     WorkoutComponent,
     WorkoutEditComponent,
