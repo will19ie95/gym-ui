@@ -1,0 +1,17 @@
+.workout-card {
+  margin: 20px 10px;
+  padding: 10px;
+}
+
+.workout-card mat-card-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.workout-card mat-card-content {
+  padding: 10px;
+}
+
+.workout-card .mat-card-header-text {
+  margin: 0px;
+}

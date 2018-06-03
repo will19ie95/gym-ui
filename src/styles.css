@@ -8,13 +8,12 @@ pink-bluegrey.css
 purple-green.css 
 
 */
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
-
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 /* angular-cli file: src/styles.css, angular calendar */
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
 
-html, 
+html,
 body {
   padding: 0px;
   margin: 0px;

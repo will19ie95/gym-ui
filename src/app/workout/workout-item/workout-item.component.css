@@ -1,6 +1,6 @@
-.workout-item-container {
+.workout-item {
   font-size: x-large;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .sub-text {
@@ -9,6 +9,9 @@
 }
 
 .item-div {
-  /* margin: 0px; */
   text-align: right;
+}
+
+.set-div {
+  text-align: left;
 }

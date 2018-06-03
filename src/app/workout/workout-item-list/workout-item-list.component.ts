@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { WorkoutItem } from "../workout-item/workout-item.model";
 
 @Component({
@@ -9,23 +9,7 @@ import { WorkoutItem } from "../workout-item/workout-item.model";
 export class WorkoutItemListComponent implements OnInit {
   constructor() {}
 
-  workouts: WorkoutItem[] = [
-    {
-      set: 1,
-      weight: 15.0,
-      reps: 10
-    },
-    {
-      set: 2,
-      weight: 30.0,
-      reps: 5
-    },
-    {
-      set: 3,
-      weight: 45.0,
-      reps: 4
-    }
-  ];
+  @Input() workout: WorkoutItem[];
 
   ngOnInit() {}
 }
