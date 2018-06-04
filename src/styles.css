@@ -8,6 +8,7 @@ pink-bluegrey.css
 purple-green.css 
 
 */
+/* changed via angular.json styles */
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 /* angular-cli file: src/styles.css, angular calendar */

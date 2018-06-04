@@ -1,3 +1,28 @@
-<p>
-  workout-edit works!
-</p>
+<div class="workout-edit" fxFlex="50" fxFlex.lt-md="100">
+  <form #workoutForm="ngForm" (ngSubmit)="onSubmit(workoutForm)" fxLayout="column">
+
+    <div fxLayout="row">
+      <form>
+        <button mat-raised-button color="primary">-</button>
+        <mat-form-field appearance="outline">
+          <mat-label>Weight</mat-label>
+          <input matInput appNumberOnly [ngModel]="weight | number: '1.0-2'" name="weight">
+        </mat-form-field>
+        <button mat-raised-button color="primary">+</button>
+      </form>
+    </div>
+
+    <div fxLayout="row">
+      <form>
+        <button mat-raised-button color="primary">-</button>
+        <mat-form-field appearance="outline">
+          <mat-label>Reps</mat-label>
+          <input matInput appNumberOnly [ngModel]="reps" name="reps">
+        </mat-form-field>
+        <button mat-raised-button color="primary">+</button>
+      </form>
+    </div>
+
+  </form>
+
+</div>

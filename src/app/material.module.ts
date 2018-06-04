@@ -17,9 +17,9 @@ import {
   MatTabsModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatFormFieldModule
 } from "@angular/material";
-import { MatFormFieldModule } from "@angular/material/form-field";
 import { LayoutModule } from "@angular/cdk/layout";
 
 @NgModule({

@@ -1,0 +1,8 @@
+.workout-edit,
+.workout-edit form {
+  margin: auto;
+}
+
+.workout-edit form button {
+  font-size: 30px;
+}

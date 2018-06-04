@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { WorkoutComponent } from "./workout.component";
 import { WorkoutEditComponent } from "./workout-edit/workout-edit.component";
@@ -9,16 +10,24 @@ import { WorkoutCardComponent } from "./workout-card/workout-card.component";
 import { MaterialModule } from "../material.module";
 import { RouterModule } from "@angular/router";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { NumberOnlyDirective } from "./number-only.directive";
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, RouterModule, FlexLayoutModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MaterialModule,
+    RouterModule,
+    FlexLayoutModule
+  ],
   declarations: [
     WorkoutComponent,
     WorkoutEditComponent,
     WorkoutItemComponent,
     WorkoutItemListComponent,
     WorkoutCardListComponent,
-    WorkoutCardComponent
+    WorkoutCardComponent,
+    NumberOnlyDirective
   ],
   exports: [
     WorkoutComponent,
