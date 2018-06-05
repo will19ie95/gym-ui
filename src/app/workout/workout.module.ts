@@ -11,6 +11,7 @@ import { MaterialModule } from "../material.module";
 import { RouterModule } from "@angular/router";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { NumberOnlyDirective } from "./number-only.directive";
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { NumberOnlyDirective } from "./number-only.directive";
     WorkoutItemListComponent,
     WorkoutCardListComponent,
     WorkoutCardComponent,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    HighlightDirective
   ],
   exports: [
     WorkoutComponent,

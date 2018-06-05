@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { WorkoutItem } from "../workout-item/workout-item.model";
+import { WorkoutSet } from "../workout-item/workout-set.model";
 
 @Component({
   selector: "app-workout-card",
@@ -7,21 +7,21 @@ import { WorkoutItem } from "../workout-item/workout-item.model";
   styleUrls: ["./workout-card.component.css"]
 })
 export class WorkoutCardComponent implements OnInit {
-  @Input() title: String;
+  @Input() name: String;
   @Input()
-  workout: WorkoutItem[] = [
+  workout: WorkoutSet[] = [
     {
-      set: 1,
+      index: 1,
       weight: 15.0,
       reps: 10
     },
     {
-      set: 2,
+      index: 2,
       weight: 30.0,
       reps: 5
     },
     {
-      set: 3,
+      index: 3,
       weight: 45.0,
       reps: 4
     }

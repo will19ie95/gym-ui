@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./workout-item.component.css"]
 })
 export class WorkoutItemComponent implements OnInit {
-  @Input() set: Number;
+  @Input() index: Number;
   @Input() weight: Number;
   @Input() reps: Number;
 
