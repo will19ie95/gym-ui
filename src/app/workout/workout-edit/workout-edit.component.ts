@@ -9,10 +9,38 @@ import { NgForm } from "@angular/forms";
 export class WorkoutEditComponent implements OnInit {
   @ViewChild("workoutForm") workoutForm: NgForm;
 
-  weight: number = 12.1234;
-  reps: number = 0;
+  weight: number;
+  reps: number;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onAddWeight() {
+    if (!this.weight) {
+      this.weight = 0;
+    }
+    this.weight += 5;
+  }
+
+  onMinusWeight() {
+    if (!this.weight) {
+      this.weight = 0;
+    }
+    this.weight -= 5;
+  }
+
+  onAddReps() {
+    if (!this.reps) {
+      this.reps = 0;
+    }
+    this.reps += 1;
+  }
+
+  onMinusReps() {
+    if (!this.reps) {
+      this.reps = 0;
+    }
+    this.reps -= 1;
+  }
 }
