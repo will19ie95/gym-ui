@@ -4,6 +4,9 @@
     <span class="capitalize">{{ workoutName }}</span>
   </mat-toolbar>
 
-  <app-workout-edit></app-workout-edit>
-  <app-workout-item *ngFor="let set of workoutSets; let i = index" [index]="i+1" [weight]="set.weight" [reps]="set.reps" (click)="onSetEdit(i)"></app-workout-item>
+  <div class="workout-content" style="margin-top: 10px;" fxFlex="50" fxFlex.lt-md="100">
+    <app-workout-edit></app-workout-edit>
+    <br>
+    <app-workout-item *ngFor="let set of workoutSets; let i = index" [index]="i+1" [weight]="set.weight" [reps]="set.reps" (click)="onSetEdit(i)"></app-workout-item>
+  </div>
 </div>

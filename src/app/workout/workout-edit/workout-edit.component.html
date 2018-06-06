@@ -1,27 +1,23 @@
 <div class="workout-edit" fxFlex="50" fxFlex.lt-md="100">
   <form #workoutForm="ngForm" (ngSubmit)="onSubmit(workoutForm)" fxLayout="column" fxLayoutGap="30px">
 
-    <div fxLayout="row">
-      <form fxLayoutGap="20px">
-        <button mat-raised-button class="big-btn" color="primary" (click)="onMinusWeight()">-</button>
-        <mat-form-field appearance="outline">
-          <mat-label>Weight</mat-label>
-          <!-- <input matInput appNumberOnly [ngModel]="weight | number: '1.0-2'" name="weight"> -->
-          <input matInput appNumberOnly class="no-spinners" type="number" [(ngModel)]="weight" name="weight" id="weight">
-        </mat-form-field>
-        <button mat-raised-button class="big-btn" color="primary" (click)="onAddWeight()">+</button>
-      </form>
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-evenly">
+      <button mat-raised-button class="big-btn" color="primary" (click)="onMinusWeight()">-</button>
+      <mat-form-field appearance="outline">
+        <mat-label>Weight</mat-label>
+        <!-- <input matInput appNumberOnly [ngModel]="weight | number: '1.0-2'" name="weight"> -->
+        <input matInput appNumberOnly class="no-spinners" type="number" [(ngModel)]="weight" name="weight" id="weight">
+      </mat-form-field>
+      <button mat-raised-button class="big-btn" color="primary" (click)="onAddWeight()">+</button>
     </div>
 
-    <div fxLayout="row">
-      <form fxLayoutGap="20px">
-        <button mat-raised-button class="big-btn" color="primary" (click)="onMinusReps()">-</button>
-        <mat-form-field appearance="outline">
-          <mat-label>Reps</mat-label>
-          <input matInput appNumberOnly class="no-spinners" type="number" [(ngModel)]="reps" name="reps" id="reps">
-        </mat-form-field>
-        <button mat-raised-button class="big-btn" color="primary" (click)="onAddReps()">+</button>
-      </form>
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-evenly">
+      <button mat-raised-button class="big-btn" color="primary" (click)="onMinusReps()">-</button>
+      <mat-form-field appearance="outline">
+        <mat-label>Reps</mat-label>
+        <input matInput appNumberOnly class="no-spinners" type="number" [(ngModel)]="reps" name="reps" id="reps">
+      </mat-form-field>
+      <button mat-raised-button class="big-btn" color="primary" (click)="onAddReps()">+</button>
     </div>
 
     <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="space-evenly center">
