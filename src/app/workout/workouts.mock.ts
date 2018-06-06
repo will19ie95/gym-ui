@@ -1,28 +1,28 @@
-import { WorkoutList } from "./workout-list.model";
+import { Workout } from "./workout.model";
 
-export const WORKOUTS: WorkoutList[] = [
+export const WORKOUTS: Workout[] = [
   {
     name: "Pull Up",
     sets: [
-      { index: 1, weight: 15.0, reps: 10 },
-      { index: 2, weight: 30.0, reps: 5 },
-      { index: 3, weight: 45.0, reps: 4 }
+      { weight: 15.0, reps: 10 },
+      { weight: 30.0, reps: 5 },
+      { weight: 45.0, reps: 4 }
     ]
   },
   {
     name: "Clean and Jerk",
     sets: [
-      { index: 1, weight: 45.0, reps: 10 },
-      { index: 2, weight: 70.0, reps: 8 },
-      { index: 3, weight: 90.0, reps: 3 }
+      { weight: 45.0, reps: 10 },
+      { weight: 70.0, reps: 8 },
+      { weight: 90.0, reps: 3 }
     ]
   },
   {
     name: "Barbell Bench Press",
     sets: [
-      { index: 1, weight: 45.0, reps: 15 },
-      { index: 2, weight: 180.0, reps: 6 },
-      { index: 3, weight: 200.0, reps: 4 }
+      { weight: 45.0, reps: 15 },
+      { weight: 180.0, reps: 6 },
+      { weight: 200.0, reps: 4 }
     ]
   }
 ];

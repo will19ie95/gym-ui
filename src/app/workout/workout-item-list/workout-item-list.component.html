@@ -1,3 +1,3 @@
 <div class="workout-item-list" fxLayout="column" fxLayoutGap="0" workout="workout">
-  <app-workout-item *ngFor="let item of workout" [index]="item.index" [weight]="item.weight" [reps]="item.reps"></app-workout-item>
+  <app-workout-item *ngFor="let item of workout; let i = index" [index]="i + 1" [weight]="item.weight" [reps]="item.reps"></app-workout-item>
 </div>

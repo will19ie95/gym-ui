@@ -1,5 +1,9 @@
 <div class="workout-main">
+
+  <mat-toolbar class="nav-toolbar" color="primary">
+    <span class="capitalize">{{ workoutName }}</span>
+  </mat-toolbar>
+
   <app-workout-edit></app-workout-edit>
-  <app-workout-item *ngFor="let set of workoutSets" [index]="set.index" [weight]="set.weight" [reps]="set.reps"
-    (click)="onSetEdit(set.index)"></app-workout-item>
+  <app-workout-item *ngFor="let set of workoutSets; let i = index" [index]="i+1" [weight]="set.weight" [reps]="set.reps" (click)="onSetEdit(i)"></app-workout-item>
 </div>

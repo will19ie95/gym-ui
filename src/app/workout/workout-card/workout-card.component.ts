@@ -11,17 +11,14 @@ export class WorkoutCardComponent implements OnInit {
   @Input()
   workout: WorkoutSet[] = [
     {
-      index: 1,
       weight: 15.0,
       reps: 10
     },
     {
-      index: 2,
       weight: 30.0,
       reps: 5
     },
     {
-      index: 3,
       weight: 45.0,
       reps: 4
     }

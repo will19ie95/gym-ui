@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
 import { WorkoutSet } from "./workout-item/workout-set.model";
 import { WORKOUTS } from "./workouts.mock";
+import { Workout } from "./workout.model";
 
 @Injectable({
   providedIn: "root"
@@ -12,12 +13,17 @@ export class WorkoutSetsService {
   workoutSetsChanged = new Subject<WorkoutSet[]>();
   startedEditing = new Subject<number>();
 
-  private workoutName: String = WORKOUTS[0].name;
-  private workoutSets: WorkoutSet[] = WORKOUTS[0].sets;
+  private workout: Workout = WORKOUTS[1];
+  private workoutName: String = this.workout.name;
+  private workoutSets: WorkoutSet[] = this.workout.sets;
 
   broadCastChange() {
     // inform subscribed of changes
     this.workoutSetsChanged.next(this.workoutSets.slice());
+  }
+
+  getWorkout() {
+    return this.workout;
   }
 
   getWorkoutName() {
