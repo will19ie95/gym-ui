@@ -13,7 +13,7 @@ import { WorkoutComponent } from "./workout/workout.component";
 const appRoutes: Routes = [
   {
     path: "",
-    redirectTo: "/exercises",
+    redirectTo: "/exercises/categories",
     pathMatch: "full"
   },
   {
