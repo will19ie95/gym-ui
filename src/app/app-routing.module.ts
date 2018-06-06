@@ -13,16 +13,16 @@ import { WorkoutComponent } from "./workout/workout.component";
 const appRoutes: Routes = [
   {
     path: "",
-    redirectTo: "/dashboard",
+    redirectTo: "/excercises",
     pathMatch: "full"
   },
   {
     path: "calendar",
-    component: CalendarComponent,
+    component: CalendarComponent
   },
   {
     path: "workout",
-    component: WorkoutComponent,
+    component: WorkoutComponent
   },
   {
     path: "exercises",
@@ -62,4 +62,4 @@ const appRoutes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
