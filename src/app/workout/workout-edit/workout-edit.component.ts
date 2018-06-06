@@ -74,8 +74,6 @@ export class WorkoutEditComponent implements OnInit, OnDestroy {
       this.workoutSetsService.addWorkoutSet(newWorkoutSet);
     }
     this.editMode = false;
-    this.weight = null;
-    this.reps = null;
   }
 
   // Pluse Minus Buttons
